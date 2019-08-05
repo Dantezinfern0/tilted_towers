@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Squads extends Component {
-  componentDidMount = async () => {
+  stats = {
+    squadData: []
+  }
+  componentWillMount = async () => {
     await _Scout.configure({
-      clientId: 'af2ef8ea-a458-434e-8c00-26fb8f938eb1',
-      clientSecret:
-        '10dcae04dca819ab4dd0505fa6dc8b923242bd61230c612a1eaf3377987a4a59',
+      clientId: process.env.REACT_APP_CLIENT_ID,
+      clientSecret: process.env.REACT_APP_CLIENT_SECRET,
       scope: 'public.read'
     })
 
@@ -20,13 +22,10 @@ class Squads extends Component {
         _Scout.players
           .get(fortnite.id, playerId, 'p10.br.m0.weekly')
           .then(data => {
-            console.log('Ajax call Done')
+            console.log('Ajax call Done', data)
             this.setState({
-              stats: data
+              squadData: data
             })
-            // saving the data to a local storage to access it later
-            // sessionStorage.setItem('stats', JSON.stringify(data))
-            // console.log('fetched',data)
           })
       })
   }
@@ -36,8 +35,8 @@ class Squads extends Component {
       <div>
         <h1>Squad Page</h1>
       </div>
-    );
+    )
   }
 }
 
-export default Squads;
+export default Squads

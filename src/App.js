@@ -5,6 +5,9 @@ import Duo from './components/Duo.jsx'
 import Squads from './components/Squads.jsx'
 import Home from './component/Home.jsx'
 import './App.css'
+require('dotenv').config({
+  path: '../.env'
+})
 // import logo from './logo.svg'
 // import Scout from './scout'
 

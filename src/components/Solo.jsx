@@ -3,13 +3,12 @@ const _Scout = window.Scout
 
 class Scout extends Component {
   state = {
-    stats: []
+    soloData: []
   }
-  componentDidMount = async () => {
+  componentWillMount = async () => {
     await _Scout.configure({
-      clientId: 'af2ef8ea-a458-434e-8c00-26fb8f938eb1',
-      clientSecret:
-        '10dcae04dca819ab4dd0505fa6dc8b923242bd61230c612a1eaf3377987a4a59',
+      clientId: process.env.REACT_APP_CLIENT_ID,
+      clientSecret: process.env.REACT_APP_CLIENT_SECRET,
       scope: 'public.read'
     })
 
@@ -24,21 +23,14 @@ class Scout extends Component {
         _Scout.players
           .get(fortnite.id, playerId, 'p2.br.m0.weekly')
           .then(data => {
-            console.log('Ajax call Done')
+            console.log('Ajax call Done', data)
             this.setState({
-              stats: data
+              soloData: data
             })
-            // saving the data to a local storage to access it later
-            // sessionStorage.setItem('stats', JSON.stringify(data))
-            // console.log('fetched',data)
           })
       })
   }
 
-  // pull out of session storage and parse back into an object for use
-  // gameStats = JSON.parse(sessionStorage.getItem('stats'))
-  // log = console.log('parsed', this.gameStats)
-  // added _render_ on to the class to create a react component
   render() {
     {
       console.log('render')
