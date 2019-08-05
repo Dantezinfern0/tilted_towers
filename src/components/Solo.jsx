@@ -45,10 +45,7 @@ class Scout extends Component {
     }
     return (
       <>
-        <h1>Stats</h1>
-        <h2>
-          {/* {this.gameStats.metadata[0].key && this.gameStats.metadata[0].key} */}
-        </h2>
+        <h1>Solo Page</h1>
       </>
     )
   }
