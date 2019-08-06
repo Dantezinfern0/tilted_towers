@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+// import Scout from '../scout'
 const _Scout = window.Scout
 
-class Scout extends Component {
+class Solo extends Component {
   state = {
     soloData: []
   }
@@ -32,15 +33,13 @@ class Scout extends Component {
   }
 
   render() {
-    {
-      console.log('render')
-    }
+  
     return (
-      <>
+      <div>
         <h1>Solo Page</h1>
-      </>
+      </div>
     )
   }
 }
 
-export default Scout
+export default Solo

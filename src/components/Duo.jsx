@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+// import Scout from '../scout'
+const _Scout = window.Scout
 
 class Duo extends Component {
   state = {
