@@ -6,7 +6,12 @@ class Duo extends Component {
   state = {
     loading: true,
     duoData: [],
-    titleD: ''
+    titleD: '',
+    killDeathRatioD: '',
+    matchesD: '',
+    winsD: '',
+    top6D: '',
+    winRateD: 0
   }
   componentDidMount = async () => {
     await _Scout.configure({
@@ -30,6 +35,12 @@ class Duo extends Component {
             this.setState({
               duoData: data,
               titleD: data.segments[0].metadata[0].displayValue.split(' ', 1),
+              killsD: data.stats[0].displayValue,
+              matchesD: data.stats[2].displayValue,
+              winsD: data.stats[5].displayValue,
+              top6D: data.stats[7].displayValue,
+              killDeathRatioD: data.stats[11].displayValue,
+              winRateD: Math.round(data.stats[12].value * 100),
               loading: false
             })
           })

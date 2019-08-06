@@ -37,9 +37,9 @@ class Squads extends Component {
               titleQ: data.segments[0].metadata[0].displayValue.split(' ', 1),
               killsQ: data.stats[0].displayValue,
               matchesQ: data.stats[2].displayValue,
-              killDeathRatioQ: data.stats[11].displayValue,
               winsQ: data.stats[5].displayValue,
               top3Q: data.stats[6].displayValue,
+              killDeathRatioQ: data.stats[11].displayValue,
               winRateQ: Math.round(data.stats[12].value * 100),
               loading: false
             })
