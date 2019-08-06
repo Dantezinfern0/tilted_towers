@@ -46,7 +46,7 @@ class Solo extends Component {
           })
       })
   }
-
+  // comment to commit
   render() {
     return (
       <div>
@@ -88,17 +88,17 @@ class Solo extends Component {
               </div>
             </div>
             <div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div />
+              <div />
+              <div />
             </div>
             <div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div />
+              <div />
+              <div />
             </div>
           </div>
-          <div></div>
+          <div />
         </section>
       </div>
     )
