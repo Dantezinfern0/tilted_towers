@@ -48,10 +48,58 @@ class Solo extends Component {
   }
 
   render() {
-  
     return (
       <div>
         <h1 className="title-header">Solo Page</h1>
+        <header>
+          <div>
+            <h2>Solo</h2>
+          </div>
+          <div>
+            <p>split color thing</p>
+          </div>
+          <div>
+            <p>Matches 234</p>
+          </div>
+          <div>
+            <p>Kills 94823</p>
+          </div>
+        </header>
+        <section>
+          <div>
+            <h1>7.24</h1>
+            <p>K/D Ratio</p>
+          </div>
+          <div>
+            <h1>62</h1>
+            <p>Wins</p>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div>
+              <div>
+                <h3>wins</h3>
+                <p>62</p>
+              </div>
+              <div>status bar</div>
+              <div>
+                <p>rank #234239754</p>
+              </div>
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div></div>
+        </section>
       </div>
     )
   }
