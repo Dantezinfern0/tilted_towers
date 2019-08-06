@@ -4,9 +4,10 @@ const _Scout = window.Scout
 
 class Solo extends Component {
   state = {
+    loading: true,
     soloData: []
   }
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
       clientSecret: process.env.REACT_APP_CLIENT_SECRET,
@@ -26,7 +27,8 @@ class Solo extends Component {
           .then(data => {
             console.log('Ajax call Done', data)
             this.setState({
-              soloData: data
+              soloData: data,
+              loading: false
             })
           })
       })

@@ -4,9 +4,11 @@ const _Scout = window.Scout
 
 class Duo extends Component {
   state = {
-    duoData: []
+    loading: true,
+    duoData: [],
+    titleD: ''
   }
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
       clientSecret: process.env.REACT_APP_CLIENT_SECRET,
@@ -22,11 +24,13 @@ class Duo extends Component {
         var playerId = data.results[0].player.playerId
 
         _Scout.players
-          .get(fortnite.id, playerId, 'p9.br.m0.weekly')
+          .get(fortnite.id, playerId, 'p10.br.m0.weekly')
           .then(data => {
             console.log('Ajax call Done', data)
             this.setState({
-              duoData: data
+              duoData: data,
+              titleD: data.segments[0].metadata[0].displayValue.split(' ', 1),
+              loading: false
             })
           })
       })
@@ -35,7 +39,7 @@ class Duo extends Component {
   render() {
     return (
       <div>
-        <h1>Duo Page</h1>
+        <h1 className="title-header">Duo Page</h1>
       </div>
     )
   }
