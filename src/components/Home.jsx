@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div>
         <h1 className="title-header">Home Page</h1>
-        <div>
+        <div className="home-page-flex">
           <Solo />
           <Duo />
           <Squads />

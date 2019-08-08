@@ -54,7 +54,7 @@ class Squads extends Component {
       <div className="entire-stat-box thin-gray-border">
         <header className="header-flex purple-color-dark">
           <div className="header-box-one purple-color-light">
-            <h2>Squads</h2>
+            <h2>{this.state.titleQ}</h2>
           </div>
           <div className="gradient-effect-purple">
             <p className="gradient-color-purple"></p>

@@ -30,8 +30,7 @@ button {
 .header-flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  max-width: 100%;
+  justify-content: space-between;
   color: ivory; 
 }
 .header-box-one {
@@ -93,6 +92,11 @@ button {
   flex-wrap: wrap;
   max-width: 100%;
 }
+.home-page-flex {
+  display: flex;
+  flex-direction: row;
+  padding:5%;
+}
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -104,9 +108,6 @@ button {
 .width {
   width: 1rem;
 }
-/* .margin-box {
-  margin: 1.3rem 30rem 1.3rem 0;
-} */
 .margin-box-two {
   margin: 1.3rem 30rem 1.3rem 0;
 }
