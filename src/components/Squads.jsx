@@ -3,14 +3,14 @@ import React, { Component } from 'react'
 const _Scout = window.Scout
 
 class Squads extends Component {
-  stats = {
+  state = {
     loading: true,
     squadData: [],
-    titleQ: '',
-    killDeathRatioQ: '',
-    matchesQ: '',
-    winsQ: '',
-    top3Q: '',
+    titleQ: 'Squad',
+    killDeathRatioQ: '42',
+    matchesQ: '42',
+    winsQ: '42',
+    top3Q: '42',
     winRateQ: 0
   }
   componentDidMount = async () => {
@@ -51,7 +51,7 @@ class Squads extends Component {
     return (
       <div>
       <h1 className="title-header">Squads Page</h1>
-      <div className="entire-stat-box">
+      <div className="entire-stat-box thin-gray-border">
         <header className="header-flex purple-color-dark">
           <div className="header-box-one purple-color-light">
             <h2>Squads</h2>
@@ -68,7 +68,7 @@ class Squads extends Component {
             <h2 className="margin-left-one">{this.state.killsQ}</h2>
           </div>
         </header>
-        <section className="sub-header-flex blue-color">
+        <section className="sub-header-flex purple-color">
           <div className="sub-header-box-one">
             <h1 className="bold-font-weight">{this.state.killDeathRatioQ}</h1>
             <p>K/D Ratio</p>

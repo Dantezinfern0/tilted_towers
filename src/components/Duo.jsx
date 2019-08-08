@@ -51,7 +51,7 @@ class Duo extends Component {
     return (
       <div>
         <h1 className="title-header">Duo Page</h1>
-        <div className="entire-stat-box">
+        <div className="entire-stat-box thin-gray-border">
           <header className="header-flex orange-color-dark">
             <div className="header-box-one orange-color-light">
               <h2>{this.state.titleD}</h2>

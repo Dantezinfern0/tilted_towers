@@ -112,7 +112,7 @@ button {
 }
 
 .gradient-effect-purple {
-  background: linear-gradient(65deg, #764487 50%, #af71ce 50%);
+  background: linear-gradient(65deg, #af71ce 50%, #764487 50%);
   padding: 0 3rem 0 3rem;
 }
 .gradient-color-purple {
@@ -126,4 +126,9 @@ button {
 }
 .text-align-to-right {
   text-align: right;
+}
+.thin-gray-border {
+  border-style: solid;
+  border-color: gray;
+  border-width: 2px;
 }

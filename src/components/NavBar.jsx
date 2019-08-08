@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-
 class NavBar extends Component {
   render() {
     return (
       <div>
         <header className="nav-bar">
           <section>
-            <h2>Fortnite</h2>
+            <Link to="/">
+              <h2>Fortnite</h2>
+            </Link>
           </section>
           <section>
             <Link to="/solo">

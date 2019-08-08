@@ -51,7 +51,7 @@ class Solo extends Component {
     return (
       <div>
         <h1 className="title-header">Solo Page</h1>
-        <div className="entire-stat-box">
+        <div className="entire-stat-box thin-gray-border">
           <header className="header-flex blue-color-dark">
             <div className="header-box-one blue-color-light">
               <h2>{this.state.titleS}</h2>
