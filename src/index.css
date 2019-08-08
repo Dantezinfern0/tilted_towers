@@ -13,11 +13,21 @@ p { font-family:'Luckiest Guy', cursive;}
 button {
   justify-content: center;
   margin-top: 1.5rem;
+  padding: 1rem;
+}
+#origin-div {
+ width: 200vh;
+}
+.fixed-position {
+  position: fixed;
 }
 .nav-bar {
   margin: 0 1rem 0.5rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.pad-it {
+  padding: 1rem;
 }
 .entire-stat-box {
   margin: 0 1rem 0 1rem;
@@ -90,7 +100,7 @@ button {
   padding: 1rem;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 100%;
+  /* max-width: 50%; */
 }
 .home-page-flex {
   display: flex;
@@ -144,4 +154,7 @@ button {
   border-style: solid;
   border-color: gray;
   border-width: 2px;
+}
+.top-padding {
+  padding-top: 4rem;
 }

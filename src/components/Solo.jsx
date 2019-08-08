@@ -49,7 +49,7 @@ class Solo extends Component {
   // comment to commit
   render() {
     return (
-      <div>
+      <div id="origin-div">
         <h1 className="title-header">Solo Page</h1>
         <div className="entire-stat-box thin-gray-border">
           <header className="header-flex blue-color-dark">

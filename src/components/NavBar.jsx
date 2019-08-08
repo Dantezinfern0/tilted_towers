@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom'
 class NavBar extends Component {
   render() {
     return (
-      <div>
-        <header className="nav-bar">
+      <div className="fixed-position">
+        <div className="nav-bar">
           <section>
             <Link to="/">
-              <h2>Fortnite</h2>
+              <h2 className="pad-it">Fortnite</h2>
             </Link>
           </section>
           <section>
             <Link to="/solo">
-              <button>Solo</button>
+              <button className="pad-it">Solo</button>
             </Link>
             <Link to="/duo">
-              <button>Duo</button>
+              <button className="pad-it">Duo</button>
             </Link>
             <Link to="/squads">
-              <button>Squads</button>
+              <button className="pad-it">Squads</button>
             </Link>
           </section>
-        </header>
+        </div>
       </div>
     )
   }
