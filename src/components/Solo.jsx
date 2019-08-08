@@ -52,70 +52,78 @@ class Solo extends Component {
       <div>
         <h1 className="title-header">Solo Page</h1>
         <div className="entire-stat-box">
-          <header className="header-flex">
-            <div>
+          <header className="header-flex blue-color-dark">
+            <div className="header-box-one blue-color-light">
               <h2>Solo</h2>
             </div>
-            <div>
-              <p>split color thing</p>
+            <div className="gradient-effect">
+              <p>split color</p>
             </div>
-            <div>
-              <p>Matches 234</p>
+            <div className="header-box-three">
+              <h2>Matches{' '}</h2>
+              <h2>{' '} 234</h2>
             </div>
-            <div>
-              <p>Kills 94823</p>
+            <div className="header-box-three">
+              <h2>Kills </h2>
+              <h2>94823</h2>
             </div>
           </header>
-          <section>
-            <div>
+          <section className="sub-header-flex blue-color">
+            <div className="sub-header-box-one">
               <h1>7.24</h1>
               <p>K/D Ratio</p>
             </div>
-            <div>
+            <div className="sub-header-box-two">
               <h1>62</h1>
               <p>Wins</p>
             </div>
           </section>
-          <section>
+          <section className="flex-box-three">
             <div>
-              <div>
-                <div>
-                  <h3>wins</h3>
-                  <p>62</p>
+              <div className="padding-left-right">
+                <div className="flex-between">
+                  <h3 className="margin-box">wins</h3>
+                  <p className="top-margin">62</p>
                 </div>
               </div>
+              <hr/>
               <div>
-                <div>
+                <div className="flex-between">
                   <h3>Win Rate</h3>
-                  <p>25%</p>
+                  <p className="top-margin">25%</p>
                 </div>
               </div>
+              <hr/>
               <div>
-                <div>
+                <div className="flex-between">
                   <h3>Matches</h3>
-                  <p>250</p>
+                  <p className="top-margin">250</p>
                 </div>
               </div>
+              <hr/>
             </div>
             <div>
-              <div>
-                <div>
+              <div className="margin-box">
+                <div className="flex-between">
                   <h3>Top10</h3>
-                  <p>100</p>
+                  <p className="top-margin">100</p>
                 </div>
               </div>
+              <hr/>
               <div>
-                <div>
+                <div className="flex-between">
                   <h3>K/D Ratio</h3>
-                  <p>7.24</p>
+                  <p className="top-margin">7.24</p>
                 </div>
               </div>
+              <hr/>
               <div>
-                <div>
+                <div className="flex-between">
                   <h3>Kills</h3>
-                  <p>1,364</p>
+                  <p className="top-margin">1,364</p>
                 </div>
               </div>
+              <hr/>
             </div>
           </section>
         </div>

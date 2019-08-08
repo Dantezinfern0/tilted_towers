@@ -18,7 +18,9 @@ button {
   justify-content: space-between;
 }
 .entire-stat-box {
-  margin: 1rem;
+  margin: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
 }
 .title-header {
   text-align: center;
@@ -27,4 +29,64 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.header-box-one {
+  padding: 0 3rem 0 3rem ;
+}
+.header-box-three {
+  display: flex;
+  padding: 0 12rem 0 12rem;
+  margin: 0;
+}
+.blue-color-light {
+  background-color: #47C0EF;
+}
+.blue-color {
+  background-color: #30B8ED;
+}
+.blue-color-dark {
+  background-color: #029AD5;
+}
+.sub-header-flex {
+  display: flex;
+  justify-content: space-around;
+  margin-left: -0.41rem;
+}
+.sub-header-box-one {
+  margin-right: 28.5rem;
+}
+.sub-header-box-two {
+  margin-right: 28.5rem;
+}
+.orange-color {
+  background-color: #F5AC72 ;
+  color: #F8BD7F, #F2AA7E;
+}
+.flex-box-three {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -0.41rem;
+  padding: 1rem;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.top-margin {
+  margin-top: 1.3rem;
+}
+.width {
+ width: 1rem;
+}
+.margin-box {
+  margin: 1.3rem 30rem 1.3rem 0;
+}
+.margin-box-two {
+  margin: 1.3rem 30rem 1.3rem 0;
+}
+.right-margin {
+  margin: 1.3rem 0 1.3rem 0;
+}
+.gradient-effect {
+  background: linear-gradient(#47C0EF 50%, #029AD5 50%)
 }
