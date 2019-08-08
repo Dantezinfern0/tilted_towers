@@ -87,14 +87,16 @@ button {
 }
 .flex-box-three {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   padding: 1rem;
+  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
 }
 .flex-between {
   display: flex;
   justify-content: space-between;
+  width: 45vw;
 }
 .top-margin {
   margin-top: 1.3rem;
@@ -102,9 +104,9 @@ button {
 .width {
   width: 1rem;
 }
-.margin-box {
+/* .margin-box {
   margin: 1.3rem 30rem 1.3rem 0;
-}
+} */
 .margin-box-two {
   margin: 1.3rem 30rem 1.3rem 0;
 }
