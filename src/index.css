@@ -29,9 +29,12 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  max-width: 100%;
 }
 .header-box-one {
-  padding: 0 0 0 3rem;
+  padding: 0 0 0 5rem;
+  margin-left: 9rem;
+  max-width: 50%;
 }
 .header-box-three {
   display: flex;
@@ -50,13 +53,15 @@ button {
 .sub-header-flex {
   display: flex;
   justify-content: space-around;
-  margin-left: -1rem;
 }
 .sub-header-box-one {
   margin-right: 28.5rem;
+  max-width: 100%;
+
 }
 .sub-header-box-two {
   margin-right: 28.5rem;
+  max-width: 100%;
 }
 .orange-color-light {
   background-color: #f8bd7f;
@@ -79,8 +84,9 @@ button {
 .flex-box-three {
   display: flex;
   justify-content: space-between;
-  margin-left: -0.41rem;
   padding: 1rem;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 .flex-between {
   display: flex;

@@ -106,7 +106,7 @@ class Solo extends Component {
               <div className="margin-box">
                 <div className="flex-between">
                   <h3>Top12</h3>
-                  <p className="top-margin">={this.state.top12S}</p>
+                  <p>{this.state.top12S}</p>
                 </div>
               </div>
               <hr/>
