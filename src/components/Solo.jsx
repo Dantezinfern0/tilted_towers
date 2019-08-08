@@ -51,55 +51,74 @@ class Solo extends Component {
     return (
       <div>
         <h1 className="title-header">Solo Page</h1>
-        <header>
-          <div>
-            <h2>Solo</h2>
-          </div>
-          <div>
-            <p>split color thing</p>
-          </div>
-          <div>
-            <p>Matches 234</p>
-          </div>
-          <div>
-            <p>Kills 94823</p>
-          </div>
-        </header>
-        <section>
-          <div>
-            <h1>7.24</h1>
-            <p>K/D Ratio</p>
-          </div>
-          <div>
-            <h1>62</h1>
-            <p>Wins</p>
-          </div>
-        </section>
-        <section>
-          <div>
+        <div className="entire-stat-box">
+          <header className="header-flex">
+            <div>
+              <h2>Solo</h2>
+            </div>
+            <div>
+              <p>split color thing</p>
+            </div>
+            <div>
+              <p>Matches 234</p>
+            </div>
+            <div>
+              <p>Kills 94823</p>
+            </div>
+          </header>
+          <section>
+            <div>
+              <h1>7.24</h1>
+              <p>K/D Ratio</p>
+            </div>
+            <div>
+              <h1>62</h1>
+              <p>Wins</p>
+            </div>
+          </section>
+          <section>
             <div>
               <div>
-                <h3>wins</h3>
-                <p>62</p>
+                <div>
+                  <h3>wins</h3>
+                  <p>62</p>
+                </div>
               </div>
-              <div>status bar</div>
               <div>
-                <p>rank #234239754</p>
+                <div>
+                  <h3>Win Rate</h3>
+                  <p>25%</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>Matches</h3>
+                  <p>250</p>
+                </div>
               </div>
             </div>
             <div>
-              <div />
-              <div />
-              <div />
+              <div>
+                <div>
+                  <h3>Top10</h3>
+                  <p>100</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>K/D Ratio</h3>
+                  <p>7.24</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>Kills</h3>
+                  <p>1,364</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <div />
-              <div />
-              <div />
-            </div>
-          </div>
-          <div />
-        </section>
+          </section>
+        </div>
       </div>
     )
   }

@@ -10,14 +10,21 @@ body {
 
 button {
   justify-content: center;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 .nav-bar {
   margin: 0 1rem 0.5rem 1rem;
   display: flex;
-  align-content: space-between;
   justify-content: space-between;
+}
+.entire-stat-box {
+  margin: 1rem;
 }
 .title-header {
   text-align: center;
+}
+.header-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
