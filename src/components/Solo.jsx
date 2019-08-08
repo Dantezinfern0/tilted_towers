@@ -56,8 +56,8 @@ class Solo extends Component {
             <div className="header-box-one blue-color-light">
               <h2>{this.state.titleS}</h2>
             </div>
-            <div className="gradient-effect">
-              <p>split color</p>
+            <div className="gradient-effect-blue">
+              <p className="gradient-color-blue"></p>
             </div>
             <div className="header-box-three">
               <h2>Matches </h2>

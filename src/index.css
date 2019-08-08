@@ -31,7 +31,7 @@ button {
   justify-content: space-around;
 }
 .header-box-one {
-  padding: 0 3rem 0 3rem ;
+  padding: 0 0 0 3rem;
 }
 .header-box-three {
   display: flex;
@@ -39,13 +39,13 @@ button {
   margin: 0;
 }
 .blue-color-light {
-  background-color: #47C0EF;
+  background-color: #47c0ef;
 }
 .blue-color {
-  background-color: #30B8ED;
+  background-color: #30b8ed;
 }
 .blue-color-dark {
-  background-color: #029AD5;
+  background-color: #029ad5;
 }
 .sub-header-flex {
   display: flex;
@@ -58,9 +58,23 @@ button {
 .sub-header-box-two {
   margin-right: 28.5rem;
 }
+.orange-color-light {
+  background-color: #f8bd7f;
+}
 .orange-color {
-  background-color: #F5AC72 ;
-  color: #F8BD7F, #F2AA7E;
+  background-color: #f2aa7e;
+}
+.orange-color-dark {
+  background-color: #f5ac72;
+}
+.purple-color-light {
+  background-color: #af71ce;
+}
+.purple-color {
+  background-color: #a25ac4;
+}
+.purple-color-dark {
+  background-color: #764487;
 }
 .flex-box-three {
   display: flex;
@@ -76,7 +90,7 @@ button {
   margin-top: 1.3rem;
 }
 .width {
- width: 1rem;
+  width: 1rem;
 }
 .margin-box {
   margin: 1.3rem 30rem 1.3rem 0;
@@ -87,8 +101,22 @@ button {
 .right-margin {
   margin: 1.3rem 0 1.3rem 0;
 }
-.gradient-effect {
-  background: linear-gradient(#47C0EF 50%, #029AD5 50%)
+.gradient-effect-blue {
+  background: linear-gradient(65deg, #47c0ef 50%, #029ad5 50%);
+  padding: 0 3rem 0 3rem;
+}
+
+.gradient-effect-orange {
+  background: linear-gradient(65deg, #f8bd7f 50%, #f5ac72 50%);
+  padding: 0 3rem 0 3rem;
+}
+
+.gradient-effect-purple {
+  background: linear-gradient(65deg, #764487 50%, #af71ce 50%);
+  padding: 0 3rem 0 3rem;
+}
+.gradient-color-purple {
+  color: #764487;
 }
 .margin-left-one {
   margin-left: 1rem;
