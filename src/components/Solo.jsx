@@ -54,27 +54,27 @@ class Solo extends Component {
         <div className="entire-stat-box">
           <header className="header-flex blue-color-dark">
             <div className="header-box-one blue-color-light">
-              <h2>Solo</h2>
+              <h2>{this.state.titleS}</h2>
             </div>
             <div className="gradient-effect">
               <p>split color</p>
             </div>
             <div className="header-box-three">
-              <h2>Matches{' '}</h2>
-              <h2>{' '} 234</h2>
+              <h2>Matches </h2>
+              <h2 className="margin-left-one">{this.state.matchesS}</h2>
             </div>
             <div className="header-box-three">
               <h2>Kills </h2>
-              <h2>94823</h2>
+              <h2 className="margin-left-one">{this.state.killsS}</h2>
             </div>
           </header>
           <section className="sub-header-flex blue-color">
             <div className="sub-header-box-one">
-              <h1>7.24</h1>
+              <h1 className="bold-font-weight">{this.state.killDeathRatioS}</h1>
               <p>K/D Ratio</p>
             </div>
             <div className="sub-header-box-two">
-              <h1>62</h1>
+              <h1 className="bold-font-weight">{this.state.winsS}</h1>
               <p>Wins</p>
             </div>
           </section>
@@ -83,21 +83,21 @@ class Solo extends Component {
               <div className="padding-left-right">
                 <div className="flex-between">
                   <h3 className="margin-box">wins</h3>
-                  <p className="top-margin">62</p>
+                  <p className="top-margin">{this.state.winsS}</p>
                 </div>
               </div>
               <hr/>
               <div>
                 <div className="flex-between">
                   <h3>Win Rate</h3>
-                  <p className="top-margin">25%</p>
+                  <p className="top-margin">{this.state.winRateS}%</p>
                 </div>
               </div>
               <hr/>
               <div>
                 <div className="flex-between">
                   <h3>Matches</h3>
-                  <p className="top-margin">250</p>
+                  <p className="top-margin">{this.state.matchesS}</p>
                 </div>
               </div>
               <hr/>
@@ -105,22 +105,22 @@ class Solo extends Component {
             <div>
               <div className="margin-box">
                 <div className="flex-between">
-                  <h3>Top10</h3>
-                  <p className="top-margin">100</p>
+                  <h3>Top12</h3>
+                  <p className="top-margin">={this.state.top12S}</p>
                 </div>
               </div>
               <hr/>
               <div>
                 <div className="flex-between">
                   <h3>K/D Ratio</h3>
-                  <p className="top-margin">7.24</p>
+                  <p className="top-margin">{this.state.killDeathRatioS}</p>
                 </div>
               </div>
               <hr/>
               <div>
                 <div className="flex-between">
                   <h3>Kills</h3>
-                  <p className="top-margin">1,364</p>
+                  <p className="top-margin">{this.state.killsS}</p>
                 </div>
               </div>
               <hr/>

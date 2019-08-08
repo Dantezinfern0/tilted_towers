@@ -50,7 +50,7 @@ button {
 .sub-header-flex {
   display: flex;
   justify-content: space-around;
-  margin-left: -0.41rem;
+  margin-left: -1rem;
 }
 .sub-header-box-one {
   margin-right: 28.5rem;
@@ -89,4 +89,13 @@ button {
 }
 .gradient-effect {
   background: linear-gradient(#47C0EF 50%, #029AD5 50%)
+}
+.margin-left-one {
+  margin-left: 1rem;
+}
+.bold-font-weight {
+  font-weight: 900;
+}
+.text-align-to-right {
+  text-align: right;
 }
