@@ -7,11 +7,11 @@ class Home extends Component {
   render() {
     return (
       <div className="top-padding">
-        <div className="home-page-flex">
+        <span className="home-page-flex">
           <Solo />
           <Duo />
           <Squads />
-        </div>
+        </span>
       </div>
     )
   }
