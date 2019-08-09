@@ -22,7 +22,7 @@ class App extends Component {
             <Route exact path="/solo" component={Solo} />
             <Route exact path="/duo" component={Duo} />
             <Route exact path="/squads" component={Squads} />
-            <Route exact path="/search/:playerName" component={Search} />
+            <Route exact path="/search" component={Search} />
           </Switch>
         </Router>
       </>
