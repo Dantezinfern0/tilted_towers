@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import DisplayComponent from './DisplayComponent.jsx'
 const _Scout = window.Scout
 
 class Scout extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       loading: true,
-      title: '',
+      // title: 'loading',
       killDeathRatio: '',
       matches: '',
       wins: '',
@@ -14,7 +15,9 @@ class Scout extends Component {
       winRate: 0
     }
   }
-  componentWillMount = async () => {
+  
+  componentDidMount = async () => {
+    console.log(this.props.dataType, this.props.classColor)
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
       clientSecret: process.env.REACT_APP_CLIENT_SECRET,
@@ -34,17 +37,25 @@ class Scout extends Component {
           .then(data => {
             console.log('Ajax call Done', data)
             this.setState({
-              title: data.segments[0].metadata[0].displayValue.split(' ', 1),
+              // title: data.segments[0].metadata[0].displayValue.split(' ', 1),
               kills: data.stats[0].displayValue,
               matches: data.stats[2].displayValue,
               wins: data.stats[5].displayValue,
               top: data.stats[6].displayValue,
               killDeathRatio: data.stats[11].displayValue,
               winRate: Math.round(data.stats[12].value * 100),
-              loading: false
+              loading: false,
             })
-            return (
-              <DisplayComponent
+            
+          })
+      })
+  }
+
+  render() {
+    return <div>
+      <DisplayComponent
+                key={this.props.name}
+                name={this.props.name}
                 title={this.state.title}
                 kills={this.state.kills}
                 matches={this.state.matches}
@@ -58,13 +69,7 @@ class Scout extends Component {
                 classColorLight={this.props.classColorLight}
                 classColorDark={this.props.classColorDark}
               />
-            )
-          })
-      })
-  }
-
-  render() {
-    return <div />
+    </div>
   }
 }
 

@@ -9,7 +9,7 @@ class DisplayComponent extends Component {
         <div className="entire-stat-box thin-gray-border">
           <header className={`header-flex ${this.props.classColorDark}`}>
             <div className={`header-box-one ${this.props.classColorLight}`}>
-              <h2 className="spacing">{this.props.title}</h2>
+              <h2 className="spacing">{this.props.name}</h2>
             </div>
             <div className={`${this.props.classGradient}`}>
               <p className="gradient-color-orange"></p>
