@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import DisplayComponent from './DisplayComponent'
 // import Scout from '../scout'
 const _Scout = window.Scout
 
@@ -11,7 +12,11 @@ class Duo extends Component {
     matchesD: '',
     winsD: '',
     top6D: '',
-    winRateD: 0
+    winRateD: 0,
+    classGradient: 'gradient-effect-orange',
+    classColorLight: 'orange-color-light',
+    classColor: 'orange-color',
+    classColorDark: 'orange-color-dark'
   }
   componentDidMount = async () => {
     await _Scout.configure({
@@ -50,83 +55,20 @@ class Duo extends Component {
   render() {
     return (
       <div>
-        {/* <h1 className="title-header">Duo Page</h1> */}
-        <div className="entire-stat-box thin-gray-border">
-          <header className="header-flex orange-color-dark">
-            <div className="header-box-one orange-color-light">
-              <h2 className="spacing">{this.state.titleD}</h2>
-            </div>
-            <div className="gradient-effect-orange">
-              <p className="gradient-color-orange"></p>
-            </div>
-            <div className="header-box-three spacing">
-              <h2>Matches </h2>
-              <h2 className="margin-left-one">{this.state.matchesD}</h2>
-            </div>
-            <div className="header-box-three">
-              <h2>Kills </h2>
-              <h2 className="margin-left-one">{this.state.killsD}</h2>
-            </div>
-          </header>
-          <section className="sub-header-flex orange-color">
-            <div className="sub-header-box-one">
-              <h1 className="bold-font-weight">{this.state.killDeathRatioD}</h1>
-              <p>K/D Ratio</p>
-            </div>
-            <div className="sub-header-box-two">
-              <h1 className="bold-font-weight">{this.state.winsD}</h1>
-              <p>Wins</p>
-            </div>
-          </section>
-          <section className="flex-box-three">
-            <div className="spacing">
-              <div className="padding-left-right">
-                <div className="flex-between">
-                  <h3 className="margin-box">wins</h3>
-                  <p className="top-margin">{this.state.winsD}</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>Win Rate</h3>
-                  <p className="top-margin">{this.state.winRateD}%</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>Matches</h3>
-                  <p className="top-margin">{this.state.matchesD}</p>
-                </div>
-              </div>
-              <hr/>
-            </div>
-            <div className="spacing">
-              <div className="margin-box">
-                <div className="flex-between">
-                  <h3>Top6</h3>
-                  <p className="top-margin">={this.state.top6D}</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>K/D Ratio</h3>
-                  <p className="top-margin">{this.state.killDeathRatioD}</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>Kills</h3>
-                  <p className="top-margin">{this.state.killsD}</p>
-                </div>
-              </div>
-              <hr/>
-            </div>
-          </section>
-        </div>
+        <DisplayComponent
+        title={this.state.titleD}
+        kills={this.state.killsD}
+        matches={this.state.matchesD}
+        wins={this.state.winsD}
+        top={this.state.top6D}
+        killDeathRatio={this.state.killDeathRatioD}
+        winRate={this.state.winRateD}
+        loading={this.state.loading}
+        classGradient={this.state.classGradient}
+        classColor={this.state.classColor}
+        classColorLight={this.state.classColorLight}
+        classColorDark={this.state.classColorDark}
+      />
       </div>
     )
   }

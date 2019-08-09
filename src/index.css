@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Luckiest Guy', cursive;
+  font-family:  'Luckiest Guy', cursive, -apple-system, BlinkMacSystemFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,6 +15,10 @@ button {
   margin-top: 1.5rem;
   padding: 1rem;
 }
+.form-layout {
+ text-align:  center;
+ margin-top: 5rem;
+}
 .page-fix-margin {
   margin-top: 6rem;
 }
@@ -22,13 +26,13 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
-.fixed-position {
-  position: fixed;
-}
 .nav-bar {
-  margin: 0 1rem 0.5rem 1rem;
+  position: fixed;
+  margin: 1rem 1rem 1rem 1rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  align-content: center;
+
 }
 .pad-it {
   padding: 1rem;
@@ -45,17 +49,13 @@ button {
 .header-flex {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   color: ivory; 
 }
 .header-box-one {
-  /* padding: 0 0 0 5rem; */
-  /* margin-left: 9rem; */
   max-width: 50%;
 }
 .header-box-three {
   display: flex;
-  /* padding: 0 12rem 0 12rem; */
   margin: 0;
 }
 .blue-color-light {
@@ -73,12 +73,10 @@ button {
   color: ivory; 
 }
 .sub-header-box-one {
-  /* margin-right: 28.5rem; */
   max-width: 100%;
 
 }
 .sub-header-box-two {
-  /* margin-right: 28.5rem; */
   max-width: 100%;
 }
 .orange-color-light {
@@ -104,8 +102,6 @@ button {
   flex-direction: row;
   padding: 1rem;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
-  /* max-width: 50%; */
 }
 .home-page-flex {
   display: flex;

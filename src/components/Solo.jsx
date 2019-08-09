@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import DisplayComponent from './DisplayComponent'
 // import Scout from '../scout'
 const _Scout = window.Scout
 
@@ -11,7 +12,11 @@ class Solo extends Component {
     matchesS: '',
     winsS: '',
     top12S: '',
-    winRateS: 0
+    winRateS: 0,
+    classGradient: 'gradient-effect-blue',
+    classColorLight: 'blue-color-light',
+    classColor: 'blue-color',
+    classColorDark: 'blue-color-dark'
   }
   componentDidMount = async () => {
     await _Scout.configure({
@@ -49,85 +54,99 @@ class Solo extends Component {
   // comment to commit
   render() {
     return (
-      <div>
-        {/* <h1 className="title-header">Solo Page</h1> */}
-        <div className="entire-stat-box thin-gray-border">
-          <header className="header-flex blue-color-dark">
-            <div className="header-box-one blue-color-light">
-              <h2 className="spacing">{this.state.titleS}</h2>
-            </div>
-            <div className="gradient-effect-blue">
-              <p className="gradient-color-blue"></p>
-            </div>
-            <div className="header-box-three spacing">
-              <h2>Matches </h2>
-              <h2 className="margin-left-one">{this.state.matchesS}</h2>
-            </div>
-            <div className="header-box-three">
-              <h2>Kills </h2>
-              <h2 className="margin-left-one">{this.state.killsS}</h2>
-            </div>
-          </header>
-          <section className="sub-header-flex blue-color">
-            <div className="sub-header-box-one">
-              <h1 className="bold-font-weight">{this.state.killDeathRatioS}</h1>
-              <p>K/D Ratio</p>
-            </div>
-            <div className="sub-header-box-two">
-              <h1 className="bold-font-weight">{this.state.winsS}</h1>
-              <p>Wins</p>
-            </div>
-          </section>
-          <section className="flex-box-three">
-            <div className="spacing">
-              <div className="padding-left-right">
-                <div className="flex-between">
-                  <h3 className="margin-box">wins</h3>
-                  <p className="top-margin">{this.state.winsS}</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>Win Rate</h3>
-                  <p className="top-margin">{this.state.winRateS}%</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>Matches</h3>
-                  <p className="top-margin">{this.state.matchesS}</p>
-                </div>
-              </div>
-              <hr/>
-            </div>
-            <div>
-              <div className="margin-box">
-                <div className="flex-between">
-                  <h3>Top12</h3>
-                  <p>{this.state.top12S}</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>K/D Ratio</h3>
-                  <p className="top-margin">{this.state.killDeathRatioS}</p>
-                </div>
-              </div>
-              <hr/>
-              <div>
-                <div className="flex-between">
-                  <h3>Kills</h3>
-                  <p className="top-margin">{this.state.killsS}</p>
-                </div>
-              </div>
-              <hr/>
-            </div>
-          </section>
-        </div>
-      </div>
+      <DisplayComponent
+        title={this.state.titleS}
+        kills={this.state.killsS}
+        matches={this.state.matchesS}
+        wins={this.state.winsS}
+        top={this.state.top12S}
+        killDeathRatio={this.state.killDeathRatioS}
+        winRate={this.state.winRateS}
+        loading={this.state.loading}
+        classGradient={this.state.classGradient}
+        classColor={this.state.classColor}
+        classColorLight={this.state.classColorLight}
+        classColorDark={this.state.classColorDark}
+      />
+      // <div>
+      // {/* <h1 className="title-header">Solo Page</h1> */}
+      //   <div className="entire-stat-box thin-gray-border">
+      //     <header className="header-flex blue-color-dark">
+      //       <div className="header-box-one blue-color-light">
+      //         <h2 className="spacing">{this.state.titleS}</h2>
+      //       </div>
+      //       <div className="gradient-effect-blue">
+      //         <p className="gradient-color-blue"></p>
+      //       </div>
+      //       <div className="header-box-three spacing">
+      //         <h2>Matches </h2>
+      //         <h2 className="margin-left-one">{this.state.matchesS}</h2>
+      //       </div>
+      //       <div className="header-box-three">
+      //         <h2>Kills </h2>
+      //         <h2 className="margin-left-one">{this.state.killsS}</h2>
+      //       </div>
+      //     </header>
+      //     <section className="sub-header-flex blue-color">
+      //       <div className="sub-header-box-one">
+      //         <h1 className="bold-font-weight">{this.state.killDeathRatioS}</h1>
+      //         <p>K/D Ratio</p>
+      //       </div>
+      //       <div className="sub-header-box-two">
+      //         <h1 className="bold-font-weight">{this.state.winsS}</h1>
+      //         <p>Wins</p>
+      //       </div>
+      //     </section>
+      //     <section className="flex-box-three">
+      //       <div className="spacing">
+      //         <div className="padding-left-right">
+      //           <div className="flex-between">
+      //             <h3 className="margin-box">wins</h3>
+      //             <p className="top-margin">{this.state.winsS}</p>
+      //           </div>
+      //         </div>
+      //         <hr/>
+      //         <div>
+      //           <div className="flex-between">
+      //             <h3>Win Rate</h3>
+      //             <p className="top-margin">{this.state.winRateS}%</p>
+      //           </div>
+      //         </div>
+      //         <hr/>
+      //         <div>
+      //           <div className="flex-between">
+      //             <h3>Matches</h3>
+      //             <p className="top-margin">{this.state.matchesS}</p>
+      //           </div>
+      //         </div>
+      //         <hr/>
+      //       </div>
+      //       <div>
+      //         <div className="margin-box">
+      //           <div className="flex-between">
+      //             <h3>Top12</h3>
+      //             <p>{this.state.top12S}</p>
+      //           </div>
+      //         </div>
+      //         <hr/>
+      //         <div>
+      //           <div className="flex-between">
+      //             <h3>K/D Ratio</h3>
+      //             <p className="top-margin">{this.state.killDeathRatioS}</p>
+      //           </div>
+      //         </div>
+      //         <hr/>
+      //         <div>
+      //           <div className="flex-between">
+      //             <h3>Kills</h3>
+      //             <p className="top-margin">{this.state.killsS}</p>
+      //           </div>
+      //         </div>
+      //         <hr/>
+      //       </div>
+      //     </section>
+      //   </div>
+      // </div>
     )
   }
 }

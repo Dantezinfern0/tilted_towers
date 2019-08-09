@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import DisplayComponent from './DisplayComponent.jsx'
+const _Scout = window.Scout
 
 class Search extends Component {
   state = {
     loading: true,
-    playerName: '',
+    playerName: 'Ninja  ',
     soloData: 'p2.br.m0.weekly',
     duoData: 'p10.br.m0.weekly',
     squadsData: 'p9.br.m0.weekly',
@@ -17,13 +19,13 @@ class Search extends Component {
     stats: ''
   }
   setValue = e => {
-    setState({
+    this.setState({
       [e.target.name]: e.target.value, 
     })
     console.log(this.state.stats, this.state.playerName)
   }
   fetchData = async e => {
-    e.preventDefault
+    e.preventDefault()
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
       clientSecret: process.env.REACT_APP_CLIENT_SECRET,
@@ -62,7 +64,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <form name="userChoice" onSubmit={e => this.setValue}>
+        <form className="form-layout" name="userChoice" onSubmit={e => this.setValue}>
           <input name="playerName" onChange={e => this.setValue} type="text" alt="name" />
           <div>
             <input
@@ -71,24 +73,27 @@ class Search extends Component {
               name="stats"
               value={this.state.soloData}
             />
-            <label for="contactChoice1">Email</label>
+            <label for="statChoice1">Solo</label>
             <input
               type="radio"
               id="statChoice2"
               name="stats"
               value={this.state.duoData}
             />
-            <label for="contactChoice1">Email</label>
+            <label for="statChoice2">Duo</label>
             <input
               type="radio"
               id="statChoice3"
               name="stats"
               value={this.state.squadsData}
             />
-            <label for="contactChoice1">Email</label>
+            <label for="statChoice3">Squad</label>
           </div>
+          {/* There is something wrong here, I'm having trouble hooking up the radio- */}
+          {/* button choice to the fetch request && getting it to fetch */}
           <button onClick={e => this.fetchData}>submit</button>
         </form>
+        {!this.state.loading && <DisplayComponent />}
       </div>
     )
   }
