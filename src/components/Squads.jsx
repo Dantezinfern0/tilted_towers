@@ -79,7 +79,7 @@ class Squads extends Component {
           </div>
         </section>
         <section className="flex-box-three">
-          <div className="spacing">
+          <div>
             <div className="padding-left-right">
               <div className="flex-between">
                 <h3 className="margin-box">wins</h3>

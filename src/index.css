@@ -15,8 +15,12 @@ button {
   margin-top: 1.5rem;
   padding: 1rem;
 }
-#origin-div {
- width: 1100px;
+.page-fix-margin {
+  margin-top: 6rem;
+}
+.wrap-it {
+  display: flex;
+  flex-wrap: wrap;
 }
 .fixed-position {
   position: fixed;
