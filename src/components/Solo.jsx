@@ -50,16 +50,16 @@ class Solo extends Component {
   render() {
     return (
       <div id="origin-div">
-        <h1 className="title-header">Solo Page</h1>
+        {/* <h1 className="title-header">Solo Page</h1> */}
         <div className="entire-stat-box thin-gray-border">
           <header className="header-flex blue-color-dark">
             <div className="header-box-one blue-color-light">
-              <h2>{this.state.titleS}</h2>
+              <h2 className="spacing">{this.state.titleS}</h2>
             </div>
             <div className="gradient-effect-blue">
               <p className="gradient-color-blue"></p>
             </div>
-            <div className="header-box-three">
+            <div className="header-box-three spacing">
               <h2>Matches </h2>
               <h2 className="margin-left-one">{this.state.matchesS}</h2>
             </div>
@@ -79,7 +79,7 @@ class Solo extends Component {
             </div>
           </section>
           <section className="flex-box-three">
-            <div>
+            <div className="spacing">
               <div className="padding-left-right">
                 <div className="flex-between">
                   <h3 className="margin-box">wins</h3>

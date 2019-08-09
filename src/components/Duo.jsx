@@ -50,16 +50,16 @@ class Duo extends Component {
   render() {
     return (
       <div>
-        <h1 className="title-header">Duo Page</h1>
+        {/* <h1 className="title-header">Duo Page</h1> */}
         <div className="entire-stat-box thin-gray-border">
           <header className="header-flex orange-color-dark">
             <div className="header-box-one orange-color-light">
-              <h2>{this.state.titleD}</h2>
+              <h2 className="spacing">{this.state.titleD}</h2>
             </div>
             <div className="gradient-effect-orange">
               <p className="gradient-color-orange"></p>
             </div>
-            <div className="header-box-three">
+            <div className="header-box-three spacing">
               <h2>Matches </h2>
               <h2 className="margin-left-one">{this.state.matchesD}</h2>
             </div>
@@ -79,7 +79,7 @@ class Duo extends Component {
             </div>
           </section>
           <section className="flex-box-three">
-            <div>
+            <div className="spacing">
               <div className="padding-left-right">
                 <div className="flex-between">
                   <h3 className="margin-box">wins</h3>
@@ -102,7 +102,7 @@ class Duo extends Component {
               </div>
               <hr/>
             </div>
-            <div>
+            <div className="spacing">
               <div className="margin-box">
                 <div className="flex-between">
                   <h3>Top6</h3>
