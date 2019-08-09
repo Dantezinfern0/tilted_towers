@@ -5,7 +5,6 @@ class DisplayComponent extends Component {
   render() {
     return (
         <div>
-        {/* <h1 className="title-header">Duo Page</h1> */}
         <div className="entire-stat-box thin-gray-border">
           <header className={`header-flex ${this.props.classColorDark}`}>
             <div className={`header-box-one ${this.props.classColorLight}`}>

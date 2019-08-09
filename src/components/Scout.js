@@ -1,3 +1,4 @@
+// API component
 import React, { Component } from 'react'
 import DisplayComponent from './DisplayComponent.jsx'
 const _Scout = window.Scout
@@ -7,7 +8,6 @@ class Scout extends Component {
     super(props)
     this.state = {
       loading: true,
-      // title: 'loading',
       killDeathRatio: '',
       matches: '',
       wins: '',
@@ -15,7 +15,7 @@ class Scout extends Component {
       winRate: 0
     }
   }
-  
+
   componentDidMount = async () => {
     console.log(this.props.dataType, this.props.classColor)
     await _Scout.configure({
