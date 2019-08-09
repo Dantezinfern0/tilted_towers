@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+@media screen and (max-width: 400px) {
+  .flex-box-three {
+    flex-wrap:wrap;
+  }
+  .header-flex {
+    flex-wrap: wrap;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -9,9 +17,9 @@ body {
 button {
   justify-content: center;
   margin-top: 1.5rem;
-  padding: 1rem;
   border-radius: 12px;
 }
+
 .blue-color-light {
   background-color: #47c0ef;
 }
