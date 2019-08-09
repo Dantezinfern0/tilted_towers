@@ -19,7 +19,6 @@ button {
   margin-top: 1.5rem;
   border-radius: 12px;
 }
-
 .blue-color-light {
   background-color: #47c0ef;
 }
@@ -51,12 +50,10 @@ button {
   background: linear-gradient(65deg, #47c0ef 50%, #029ad5 50%);
   padding: 0 3rem 0 3rem;
 }
-
 .gradient-effect-orange {
   background: linear-gradient(65deg, #f8bd7f 50%, #f5ac72 50%);
   padding: 0 3rem 0 3rem;
 }
-
 .gradient-effect-purple {
   background: linear-gradient(65deg, #af71ce 50%, #764487 50%);
   padding: 0 3rem 0 3rem;
@@ -68,14 +65,12 @@ button {
 .page-fix-margin {
   margin-top: 6rem;
 }
-
 .nav-bar {
   position: fixed;
   margin: 1rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: row;
   align-content: center;
-
 }
 .pad-it {
   padding: 1rem;
@@ -125,7 +120,6 @@ button {
 .top-pad {
   padding-top: 0.8rem;
 }
-
 .right-margin {
   margin: 1.3rem 0 1.3rem 0;
 }
