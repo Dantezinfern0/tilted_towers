@@ -14,20 +14,20 @@ class DisplayComponent extends Component {
               <p className="gradient-color-orange" />
             </div>
             <div className="header-box-three spacing">
-              <h2>Matches </h2>
+              <p className="top-pad">Matches </p>
               <h2 className="margin-left-one">{this.props.matches}</h2>
             </div>
             <div className="header-box-three">
-              <h2>Kills </h2>
+              <p className="top-pad">Kills </p>
               <h2 className="margin-left-one">{this.props.kills}</h2>
             </div>
           </header>
           <section className={`sub-header-flex ${this.props.classColor}`}>
-            <div className="sub-header-box-one">
+            <div>
               <h1 className="bold-font-weight">{this.props.killDeathRatio}</h1>
               <p>K/D Ratio</p>
             </div>
-            <div className="sub-header-box-two">
+            <div>
               <h1 className="bold-font-weight">{this.props.wins}</h1>
               <p>Wins</p>
             </div>
@@ -36,31 +36,31 @@ class DisplayComponent extends Component {
             <div className="spacing">
               <div className="padding-left-right">
                 <div className="flex-between">
-                  <h3 className="margin-box">wins</h3>
-                  <p className="top-margin">{this.props.wins}</p>
+                  <h3>wins</h3>
+                  <p>{this.props.wins}</p>
                 </div>
               </div>
               <hr />
               <div>
                 <div className="flex-between">
                   <h3>Win Rate</h3>
-                  <p className="top-margin">{this.props.winRate}%</p>
+                  <p>{this.props.winRate}%</p>
                 </div>
               </div>
               <hr />
               <div>
                 <div className="flex-between">
                   <h3>Matches</h3>
-                  <p className="top-margin">{this.props.matches}</p>
+                  <p>{this.props.matches}</p>
                 </div>
               </div>
               <hr />
             </div>
             <div className="spacing">
-              <div className="margin-box">
+              <div>
                 <div className="flex-between">
                   <h3>{this.props.topName}</h3>
-                  <p className="top-margin">{this.props.top}</p>
+                  <p>{this.props.top}</p>
                 </div>
               </div>
               <hr />

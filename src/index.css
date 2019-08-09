@@ -68,10 +68,7 @@ button {
 .page-fix-margin {
   margin-top: 6rem;
 }
-.wrap-it {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .nav-bar {
   position: fixed;
   margin: 1rem 1rem 1rem 1rem;
@@ -109,12 +106,6 @@ button {
   justify-content: space-around;
   color: ivory; 
 }
-.sub-header-box-one {
-  max-width: 100%;
-}
-.sub-header-box-two {
-  max-width: 100%;
-}
 .flex-box-three {
   display: flex;
   flex-direction: row;
@@ -131,15 +122,10 @@ button {
   justify-content: space-between;
   width: 45vw;
 }
-.top-margin {
-  margin-top: 1.3rem;
+.top-pad {
+  padding-top: 0.8rem;
 }
-.width {
-  width: 1rem;
-}
-.margin-box-two {
-  margin: 1.3rem 30rem 1.3rem 0;
-}
+
 .right-margin {
   margin: 1.3rem 0 1.3rem 0;
 }
@@ -168,4 +154,8 @@ button {
 }
 .component-padding {
   padding-top: 8rem;
+}
+.wrap-it {
+  display: flex;
+  flex-wrap: wrap;
 }
