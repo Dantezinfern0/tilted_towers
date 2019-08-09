@@ -18,7 +18,7 @@ class NavBar extends Component {
           <Link to="/squads">
             <button className="pad-it">Squads</button>
           </Link>
-          <Link to="/search/:playerName">
+          <Link to="/search">
             <button className="pad-it">Search</button>
           </Link>
         </div>
