@@ -10,14 +10,13 @@ import Search from './components/Search.jsx'
 require('dotenv').config({
   path: '../.env'
 })
-// import logo from './logo.svg'
-// import Scout from './scout'
 
 class App extends Component {
   render() {
     return (
       <>
         <Router>
+          <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/solo" component={Solo} />
@@ -25,7 +24,6 @@ class App extends Component {
             <Route exact path="/squads" component={Squads} />
             <Route exact path="/search/:playerName" component={Search} />
           </Switch>
-        <NavBar />
         </Router>
       </>
     )

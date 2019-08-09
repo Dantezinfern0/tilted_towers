@@ -1,17 +1,17 @@
 // This is the Display Model/Component for that stat box
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class DisplayComponent extends Component {
   render() {
     return (
-        <div>
+      <div>
         <div className="entire-stat-box thin-gray-border">
           <header className={`header-flex ${this.props.classColorDark}`}>
             <div className={`header-box-one ${this.props.classColorLight}`}>
               <h2 className="spacing">{this.props.name}</h2>
             </div>
             <div className={`${this.props.classGradient}`}>
-              <p className="gradient-color-orange"></p>
+              <p className="gradient-color-orange" />
             </div>
             <div className="header-box-three spacing">
               <h2>Matches </h2>
@@ -40,21 +40,21 @@ class DisplayComponent extends Component {
                   <p className="top-margin">{this.props.wins}</p>
                 </div>
               </div>
-              <hr/>
+              <hr />
               <div>
                 <div className="flex-between">
                   <h3>Win Rate</h3>
                   <p className="top-margin">{this.props.winRate}%</p>
                 </div>
               </div>
-              <hr/>
+              <hr />
               <div>
                 <div className="flex-between">
                   <h3>Matches</h3>
                   <p className="top-margin">{this.props.matches}</p>
                 </div>
               </div>
-              <hr/>
+              <hr />
             </div>
             <div className="spacing">
               <div className="margin-box">
@@ -63,28 +63,27 @@ class DisplayComponent extends Component {
                   <p className="top-margin">={this.props.top}</p>
                 </div>
               </div>
-              <hr/>
+              <hr />
               <div>
                 <div className="flex-between">
                   <h3>K/D Ratio</h3>
                   <p className="top-margin">{this.props.killDeathRatio}</p>
                 </div>
               </div>
-              <hr/>
+              <hr />
               <div>
                 <div className="flex-between">
                   <h3>Kills</h3>
                   <p className="top-margin">{this.props.kills}</p>
                 </div>
               </div>
-              <hr/>
+              <hr />
             </div>
           </section>
         </div>
-      
       </div>
-    );
+    )
   }
 }
 
-export default DisplayComponent;
+export default DisplayComponent

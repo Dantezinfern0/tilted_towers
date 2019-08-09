@@ -17,7 +17,7 @@ class Scout extends Component {
   }
 
   componentDidMount = async () => {
-    console.log(this.props.dataType, this.props.classColor)
+    // console.log(this.props.dataType, this.props.classColor)
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
       clientSecret: process.env.REACT_APP_CLIENT_SECRET,
@@ -35,7 +35,7 @@ class Scout extends Component {
         _Scout.players
           .get(fortnite.id, playerId, `${this.props.dataType}`)
           .then(data => {
-            console.log('Ajax call Done', data)
+            // console.log('Ajax call Done', data)
             this.setState({
               // title: data.segments[0].metadata[0].displayValue.split(' ', 1),
               kills: data.stats[0].displayValue,
@@ -44,32 +44,33 @@ class Scout extends Component {
               top: data.stats[6].displayValue,
               killDeathRatio: data.stats[11].displayValue,
               winRate: Math.round(data.stats[12].value * 100),
-              loading: false,
+              loading: false
             })
-            
           })
       })
   }
 
   render() {
-    return <div>
-      <DisplayComponent
-                key={this.props.name}
-                name={this.props.name}
-                title={this.state.title}
-                kills={this.state.kills}
-                matches={this.state.matches}
-                wins={this.state.wins}
-                top={this.state.top}
-                killDeathRatio={this.state.killDeathRatio}
-                winRate={this.state.winRate}
-                loading={this.state.loading}
-                classGradient={this.props.classGradient}
-                classColor={this.props.classColor}
-                classColorLight={this.props.classColorLight}
-                classColorDark={this.props.classColorDark}
-              />
-    </div>
+    return (
+      <div>
+        <DisplayComponent
+          key={this.props.name}
+          name={this.props.name}
+          title={this.state.title}
+          kills={this.state.kills}
+          matches={this.state.matches}
+          wins={this.state.wins}
+          top={this.state.top}
+          killDeathRatio={this.state.killDeathRatio}
+          winRate={this.state.winRate}
+          loading={this.state.loading}
+          classGradient={this.props.classGradient}
+          classColor={this.props.classColor}
+          classColorLight={this.props.classColorLight}
+          classColorDark={this.props.classColorDark}
+        />
+      </div>
+    )
   }
 }
 
