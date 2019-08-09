@@ -6,7 +6,6 @@ const _Scout = window.Scout
 class Duo extends Component {
   state = {
     loading: true,
-    duoData: [],
     titleD: '',
     killDeathRatioD: '',
     matchesD: '',
@@ -18,6 +17,8 @@ class Duo extends Component {
     classColor: 'orange-color',
     classColorDark: 'orange-color-dark'
   }
+  // I really really want to refactor this code
+  // the only thing that is changing is the 'segment'
   componentDidMount = async () => {
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
@@ -38,7 +39,6 @@ class Duo extends Component {
           .then(data => {
             console.log('Ajax call Done', data)
             this.setState({
-              duoData: data,
               titleD: data.segments[0].metadata[0].displayValue.split(' ', 1),
               killsD: data.stats[0].displayValue,
               matchesD: data.stats[2].displayValue,

@@ -1,4 +1,4 @@
-// This is where I will extract the display model eventually
+// This is the Display Model/Component for that stat box
 import React, { Component } from 'react';
 
 class DisplayComponent extends Component {

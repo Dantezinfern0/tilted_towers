@@ -6,7 +6,6 @@ const _Scout = window.Scout
 class Squads extends Component {
   state = {
     loading: true,
-    squadData: [],
     titleQ: 'Squad',
     killDeathRatioQ: '42',
     matchesQ: '42',
@@ -18,6 +17,8 @@ class Squads extends Component {
     classColor: 'purple-color',
     classColorDark: 'purple-color-dark'
   }
+  // I really really want to refactor this code
+  // the only thing that is changing is the 'segment'
   componentDidMount = async () => {
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
@@ -38,7 +39,6 @@ class Squads extends Component {
           .then(data => {
             console.log('Ajax call Done', data)
             this.setState({
-              squadData: data,
               titleQ: data.segments[0].metadata[0].displayValue.split(' ', 1),
               killsQ: data.stats[0].displayValue,
               matchesQ: data.stats[2].displayValue,
