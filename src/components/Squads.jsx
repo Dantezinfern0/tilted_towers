@@ -9,15 +9,17 @@ class Squads extends Component {
     classGradient: 'gradient-effect-purple',
     classColorLight: 'purple-color-light',
     classColor: 'purple-color',
-    classColorDark: 'purple-color-dark'
+    classColorDark: 'purple-color-dark',
+    squadsType: 'p9.br.m0.weekly'
   }
 }
   render() {
     return (
-      <div>
+      <div className="component-padding">
       <Scout
           name="Squads"
-          dataType={this.state.dataType}
+          topName="Top 3"
+          dataType={this.state.squadsType}
           classGradient={this.state.classGradient}
           classColor={this.state.classColor}
           classColorLight={this.state.classColorLight}

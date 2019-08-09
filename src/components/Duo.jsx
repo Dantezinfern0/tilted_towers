@@ -9,15 +9,17 @@ class Duo extends Component {
     classGradient: 'gradient-effect-orange',
     classColorLight: 'orange-color-light',
     classColor: 'orange-color',
-    classColorDark: 'orange-color-dark'
+    classColorDark: 'orange-color-dark',
+    duoType: 'p10.br.m0.weekly'
   }
 }
   render() {
     return (
-      <div>
+      <div className="component-padding">
       <Scout
           name="Duo"
-          dataType={this.state.dataType}
+          topName="top 6"
+          dataType={this.state.duoType}
           classGradient={this.state.classGradient}
           classColor={this.state.classColor}
           classColorLight={this.state.classColorLight}

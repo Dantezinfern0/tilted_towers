@@ -6,15 +6,52 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h3 { font-family:'Luckiest Guy', cursive;}
-h2 { font-family:'Luckiest Guy', cursive;}
-h1 { font-family:'Luckiest Guy', cursive;}
-p { font-family:'Luckiest Guy', cursive;}
 button {
   justify-content: center;
   margin-top: 1.5rem;
   padding: 1rem;
   border-radius: 12px;
+}
+.blue-color-light {
+  background-color: #47c0ef;
+}
+.blue-color {
+  background-color: #30b8ed;
+}
+.blue-color-dark {
+  background-color: #029ad5;
+}
+.orange-color-light {
+  background-color: #f8bd7f;
+}
+.orange-color {
+  background-color: #f2aa7e;
+}
+.orange-color-dark {
+  background-color: #f5ac72;
+}
+.purple-color-light {
+  background-color: #af71ce;
+}
+.purple-color {
+  background-color: #a25ac4;
+}
+.purple-color-dark {
+  background-color: #764487;
+}
+.gradient-effect-blue {
+  background: linear-gradient(65deg, #47c0ef 50%, #029ad5 50%);
+  padding: 0 3rem 0 3rem;
+}
+
+.gradient-effect-orange {
+  background: linear-gradient(65deg, #f8bd7f 50%, #f5ac72 50%);
+  padding: 0 3rem 0 3rem;
+}
+
+.gradient-effect-purple {
+  background: linear-gradient(65deg, #af71ce 50%, #764487 50%);
+  padding: 0 3rem 0 3rem;
 }
 .form-layout {
  text-align:  center;
@@ -59,15 +96,6 @@ button {
   display: flex;
   margin: 0;
 }
-.blue-color-light {
-  background-color: #47c0ef;
-}
-.blue-color {
-  background-color: #30b8ed;
-}
-.blue-color-dark {
-  background-color: #029ad5;
-}
 .sub-header-flex {
   display: flex;
   justify-content: space-around;
@@ -75,28 +103,9 @@ button {
 }
 .sub-header-box-one {
   max-width: 100%;
-
 }
 .sub-header-box-two {
   max-width: 100%;
-}
-.orange-color-light {
-  background-color: #f8bd7f;
-}
-.orange-color {
-  background-color: #f2aa7e;
-}
-.orange-color-dark {
-  background-color: #f5ac72;
-}
-.purple-color-light {
-  background-color: #af71ce;
-}
-.purple-color {
-  background-color: #a25ac4;
-}
-.purple-color-dark {
-  background-color: #764487;
 }
 .flex-box-three {
   display: flex;
@@ -126,20 +135,6 @@ button {
 .right-margin {
   margin: 1.3rem 0 1.3rem 0;
 }
-.gradient-effect-blue {
-  background: linear-gradient(65deg, #47c0ef 50%, #029ad5 50%);
-  padding: 0 3rem 0 3rem;
-}
-
-.gradient-effect-orange {
-  background: linear-gradient(65deg, #f8bd7f 50%, #f5ac72 50%);
-  padding: 0 3rem 0 3rem;
-}
-
-.gradient-effect-purple {
-  background: linear-gradient(65deg, #af71ce 50%, #764487 50%);
-  padding: 0 3rem 0 3rem;
-}
 .gradient-color-purple {
   color: #764487;
 }
@@ -162,4 +157,7 @@ button {
 }
 .spacing {
   padding: 0 1rem 0 1rem;
+}
+.component-padding {
+  padding-top: 8rem;
 }

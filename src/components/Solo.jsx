@@ -9,15 +9,16 @@ class Solo extends Component {
       classColorLight: 'blue-color-light',
       classColor: 'blue-color',
       classColorDark: 'blue-color-dark',
-      dataType: 'p2.br.m0.weekly'
+      soloType: 'p2.br.m0.weekly'
     }
   }
   render() {
     return (
-      <div>
+      <div className="component-padding">
         <Scout
           name="Solo"
-          dataType={this.state.dataType}
+          topName="Top 12"
+          dataType={this.state.soloType}
           classGradient={this.state.classGradient}
           classColor={this.state.classColor}
           classColorLight={this.state.classColorLight}

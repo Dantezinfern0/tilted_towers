@@ -12,12 +12,12 @@ class Scout extends Component {
       matches: '',
       wins: '',
       top: '',
-      winRate: 0
+      winRate: 0,
     }
   }
 
-  componentDidMount = async () => {
-    // console.log(this.props.dataType, this.props.classColor)
+  componentWillMount = async () => {
+    console.log(this.props.dataType, this.props.classColor)
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
       clientSecret: process.env.REACT_APP_CLIENT_SECRET,
@@ -35,7 +35,7 @@ class Scout extends Component {
         _Scout.players
           .get(fortnite.id, playerId, `${this.props.dataType}`)
           .then(data => {
-            // console.log('Ajax call Done', data)
+            console.log('Ajax call Done', data)
             this.setState({
               // title: data.segments[0].metadata[0].displayValue.split(' ', 1),
               kills: data.stats[0].displayValue,
@@ -55,6 +55,7 @@ class Scout extends Component {
       <div>
         <DisplayComponent
           key={this.props.name}
+          topName={this.props.topName}
           name={this.props.name}
           title={this.state.title}
           kills={this.state.kills}

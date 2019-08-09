@@ -59,8 +59,8 @@ class DisplayComponent extends Component {
             <div className="spacing">
               <div className="margin-box">
                 <div className="flex-between">
-                  <h3>Top6</h3>
-                  <p className="top-margin">={this.props.top}</p>
+                  <h3>{this.props.topName}</h3>
+                  <p className="top-margin">{this.props.top}</p>
                 </div>
               </div>
               <hr />
