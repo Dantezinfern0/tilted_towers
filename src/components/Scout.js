@@ -12,6 +12,8 @@ class Scout extends Component {
       matches: '',
       wins: '',
       top: '',
+      // top6:'',
+      // top12: '',
       winRate: 0,
     }
   }
@@ -37,11 +39,13 @@ class Scout extends Component {
           .then(data => {
             console.log('Ajax call Done', data)
             this.setState({
-              // title: data.segments[0].metadata[0].displayValue.split(' ', 1),
+              title: data.segments[0].metadata[0].displayValue.split(' ', 1),
               kills: data.segments[0].stats[0].displayValue,
               matches: data.segments[0].stats[2].displayValue,
               wins: data.segments[0].stats[3].displayValue,
               top: data.segments[0].stats[4].displayValue,
+              // top6: data.segments[0].stats[5].displayValue,
+              // top12: data.segments[0].stats[6].displayValue,
               killDeathRatio: data.segments[0].stats[8].displayValue,
               winRate: Math.round(data.stats[12].value * 100),
               loading: false
@@ -56,7 +60,6 @@ class Scout extends Component {
         <DisplayComponent
           key={this.props.name}
           topName={this.props.topName}
-          name={this.props.name}
           title={this.state.title}
           kills={this.state.kills}
           matches={this.state.matches}
