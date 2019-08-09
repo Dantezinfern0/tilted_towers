@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DisplayComponent from './DisplayComponent'
-// import Scout from '../scout'
+import Scout from './Scout.js'
 const _Scout = window.Scout
 
 class Solo extends Component {
@@ -15,7 +15,8 @@ class Solo extends Component {
     classGradient: 'gradient-effect-blue',
     classColorLight: 'blue-color-light',
     classColor: 'blue-color',
-    classColorDark: 'blue-color-dark'
+    classColorDark: 'blue-color-dark',
+    dataType: 'p2.br.m0.weekly'
   }
   // I really really want to refactor this code
   // the only thing that is changing is the 'segment'
@@ -54,6 +55,7 @@ class Solo extends Component {
   // comment to commit
   render() {
     return (
+      <div>
       <DisplayComponent
         title={this.state.titleS}
         kills={this.state.killsS}
@@ -68,6 +70,8 @@ class Solo extends Component {
         classColorLight={this.state.classColorLight}
         classColorDark={this.state.classColorDark}
       />
+      {/* <Scout dataType={this.state.dataType}/> */}
+      </div>
     )
   }
 }
