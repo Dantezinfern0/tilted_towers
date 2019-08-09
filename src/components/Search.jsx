@@ -1,34 +1,48 @@
 import React, { Component } from 'react'
 import Scout from './Scout.js'
-const _Scout = window.Scout
 
 class Search extends Component {
-  state = {
-    loading: true,
-    playerName: 'Ninja  ',
-    soloData: 'p2.br.m0.weekly',
-    duoData: 'p10.br.m0.weekly',
-    squadsData: 'p9.br.m0.weekly',
-    dataType: '',
-    stats: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true,
+      playerName: 'Ninja  ',
+      soloData: 'p2.br.m0.weekly',
+      duoData: 'p10.br.m0.weekly',
+      squadsData: 'p9.br.m0.weekly',
+      dataType: ''
+    }
   }
   // this function is supposed to update the state with user input
   setValue = e => {
     this.setState({
-      [e.target.name]: e.target.value, 
+      [e.target.name]: e.target.value
     })
     console.log(this.state.stats, this.state.playerName)
-  }  
+  }
+  // I think I need a function to handle the radio buttons onSubmit here
+// psuedo-code:
+// setRadio(){if (statChoice1 === true)  setState({dataType: this.state.soloData})}
+
   render() {
     return (
       <div>
-        <form className="form-layout" name="userChoice" onSubmit={this.setState({dataType:'radio button that is true'})}>
-          <input name="playerName" onChange={e => this.setValue} type="text" alt="name" />
+        <form
+          className="form-layout"
+          name="userChoice"
+          onSubmit={this.setState({ dataType: 'radio button that is true' })}
+        >
+          <input
+            name="playerName"
+            onChange={e => this.setValue}
+            type="text"
+            alt="name"
+          />
           <div>
             <input
               type="radio"
               id="statChoice1"
-              name="stats"
+              name="dataType"
               value={this.state.soloData}
               checked={true}
             />
@@ -36,7 +50,7 @@ class Search extends Component {
             <input
               type="radio"
               id="statChoice2"
-              name="stats"
+              name="dataType"
               value={this.state.duoData}
               checked={true}
             />
@@ -44,14 +58,15 @@ class Search extends Component {
             <input
               type="radio"
               id="statChoice3"
-              name="stats"
+              name="dataType"
               value={this.state.squadsData}
               checked={true}
             />
             <label for="statChoice3">Squad</label>
           </div>
-          <button onClick={this.setState({loading: false})}>submit</button>
+          <button onClick={this.setState({ loading: false })}>submit</button>
         </form>
+        {/* I will need to include the color scheme and unique classes below */}
         {!this.state.loading && <Scout dataType={this.state.dataType} />}
       </div>
     )
