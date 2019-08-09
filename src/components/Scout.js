@@ -1,8 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 const _Scout = window.Scout
 
 class Scout extends Component {
-  componentDidMount = async () => {
+  constructor() {
+    super()
+    this.state = {
+      loading: true,
+      title: '',
+      killDeathRatio: '',
+      matches: '',
+      wins: '',
+      top: '',
+      winRate: 0
+    }
+  }
+  componentWillMount = async () => {
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,
       clientSecret: process.env.REACT_APP_CLIENT_SECRET,
@@ -31,17 +43,29 @@ class Scout extends Component {
               winRate: Math.round(data.stats[12].value * 100),
               loading: false
             })
+            return (
+              <DisplayComponent
+                title={this.state.title}
+                kills={this.state.kills}
+                matches={this.state.matches}
+                wins={this.state.wins}
+                top={this.state.top}
+                killDeathRatio={this.state.killDeathRatio}
+                winRate={this.state.winRate}
+                loading={this.state.loading}
+                classGradient={this.props.classGradient}
+                classColor={this.props.classColor}
+                classColorLight={this.props.classColorLight}
+                classColorDark={this.props.classColorDark}
+              />
+            )
           })
       })
   }
 
   render() {
-    return (
-      <div>
-        
-      </div>
-    );
+    return <div />
   }
 }
 
-export default Scout;
+export default Scout

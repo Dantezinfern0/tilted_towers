@@ -56,21 +56,27 @@ class Solo extends Component {
   render() {
     return (
       <div>
-      <DisplayComponent
-        title={this.state.titleS}
-        kills={this.state.killsS}
-        matches={this.state.matchesS}
-        wins={this.state.winsS}
-        top={this.state.top12S}
-        killDeathRatio={this.state.killDeathRatioS}
-        winRate={this.state.winRateS}
-        loading={this.state.loading}
-        classGradient={this.state.classGradient}
-        classColor={this.state.classColor}
-        classColorLight={this.state.classColorLight}
-        classColorDark={this.state.classColorDark}
-      />
-      {/* <Scout dataType={this.state.dataType}/> */}
+        <DisplayComponent
+          title={this.state.titleS}
+          kills={this.state.killsS}
+          matches={this.state.matchesS}
+          wins={this.state.winsS}
+          top={this.state.top12S}
+          killDeathRatio={this.state.killDeathRatioS}
+          winRate={this.state.winRateS}
+          loading={this.state.loading}
+          classGradient={this.state.classGradient}
+          classColor={this.state.classColor}
+          classColorLight={this.state.classColorLight}
+          classColorDark={this.state.classColorDark}
+        />
+        {/* <Scout
+          dataType={this.state.dataType}
+          classGradient={this.state.classGradient}
+          classColor={this.state.classColor}
+          classColorLight={this.state.classColorLight}
+          classColorDark={this.state.classColorDark}
+        /> */}
       </div>
     )
   }
