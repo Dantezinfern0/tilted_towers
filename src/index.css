@@ -108,7 +108,6 @@ button {
   display: flex;
   flex-direction: row;
   padding:5%;
-  object-fit: scale-down !important;
 }
 .flex-between {
   display: flex;
@@ -118,17 +117,11 @@ button {
 .top-pad {
   padding-top: 0.8rem;
 }
-.right-margin {
-  margin: 1.3rem 0 1.3rem 0;
-}
 .margin-left-one {
   margin-left: 1rem;
 }
 .bold-font-weight {
   font-weight: 900;
-}
-.text-align-to-right {
-  text-align: right;
 }
 .thin-gray-border {
   border-style: solid;
@@ -143,8 +136,4 @@ button {
 }
 .component-padding {
   padding-top: 8rem;
-}
-.wrap-it {
-  display: flex;
-  flex-wrap: wrap;
 }
