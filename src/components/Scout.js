@@ -18,7 +18,7 @@ class Scout extends Component {
     }
   }
 
-  componentWillMount = async () => {
+  async componentWillMount() {
     console.log(this.props.dataType, this.props.classColor)
     await _Scout.configure({
       clientId: process.env.REACT_APP_CLIENT_ID,

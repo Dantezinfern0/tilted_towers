@@ -69,56 +69,18 @@ button {
   flex-direction: row;
   align-content: center;
 }
-.pad-it {
-  padding: 1rem;
-}
-.entire-stat-box {
-  margin: 0 1rem 0 1rem;
-  display: flex;
-  flex-direction: column;
-}
-.title-header {
-  text-align: center;
-  padding: 2rem;
-}
+
+
+
 .header-flex {
   display: flex;
   flex-direction: row;
   color: ivory; 
 }
-.header-box-one {
-  max-width: 50%;
-}
-.header-box-three {
-  display: flex;
-  margin: 0;
-}
-.sub-header-flex {
-  display: flex;
-  justify-content: space-around;
-  color: ivory; 
-}
-.flex-box-three {
-  display: flex;
-  flex-direction: row;
-  padding: 1rem;
-  justify-content: space-between;
-}
 .home-page-flex {
   display: flex;
   flex-direction: row;
   padding:5%;
-}
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  width: 45vw;
-}
-.top-pad {
-  padding-top: 0.8rem;
-}
-.margin-left-one {
-  margin-left: 1rem;
 }
 .bold-font-weight {
   font-weight: 900;
@@ -128,12 +90,6 @@ button {
   border-color: gray;
   border-width: 2px;
 }
-.top-padding {
-  padding-top: 4rem;
-}
-.spacing {
-  padding: 0 1rem 0 1rem;
-}
-.component-padding {
-  padding-top: 8rem;
-}
+
+
+

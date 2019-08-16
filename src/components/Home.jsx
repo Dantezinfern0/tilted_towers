@@ -8,9 +8,9 @@ class Home extends Component {
     return (
       <div className="top-padding">
         <span className="home-page-flex">
-          <Solo />
-          <Duo />
-          <Squads />
+          <Solo className=""/>
+          <Duo className="" />
+          <Squads className="" />
         </span>
       </div>
     )
