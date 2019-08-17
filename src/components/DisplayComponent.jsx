@@ -5,82 +5,78 @@ class DisplayComponent extends Component {
   render() {
     return (
       <div>
-        <div className=" ">
+        <div>
           <header className={`header-flex ${this.props.classColorDark}`}>
-            <div className={` ${this.props.classColorLight}`}>
-              <h2 className="">{this.props.title}</h2>
+            <div className={`pad ${this.props.classColorLight}`}>
+              <h2>{this.props.title}</h2>
             </div>
             <div className={`${this.props.classGradient}`}>
-              <p className="" />
+              <p />
             </div>
-            <div className="">
-              <p className="">Matches </p>
-              <h2 className="">{this.props.matches}</h2>
+            <div className="pad">
+              <p>Matches </p>
+              <h2>{this.props.matches}</h2>
             </div>
-            <div className="">
-              <p className="">Kills </p>
-              <h2 className="">{this.props.kills}</h2>
+            <div className="pad">
+              <p>Kills </p>
+              <h2>{this.props.kills}</h2>
             </div>
           </header>
-          <section className={` ${this.props.classColor}`}>
-            <div>
-              <h1 className="">{this.props.killDeathRatio}</h1>
+          <section className={`flex-row ${this.props.classColor}`}>
+            <div className="pad">
+              <h1>{this.props.killDeathRatio}</h1>
               <p>K/D Ratio</p>
             </div>
-            <div>
-              <h1 className="">{this.props.wins}</h1>
+            <div className="pad">
+              <h1>{this.props.wins}</h1>
               <p>Wins</p>
             </div>
           </section>
-          <section className="">
-            <div className="">
-              <div className="">
-                <div className="">
-                  <h3>wins</h3>
-                  <p>{this.props.wins}</p>
-                </div>
-              </div>
-              <hr />
+          <section className="flex-row">
+            <section>
               <div>
-                <div className="">
-                  <h3>Win Rate</h3>
-                  <p>{this.props.winRate}%</p>
+                <div>
+                  <div className="pad">
+                    <h3>wins</h3>
+                    <p>{this.props.wins}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="pad">
+                    <h3>Win Rate</h3>
+                    <p>{this.props.winRate}%</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="pad">
+                    <h3>Matches</h3>
+                    <p>{this.props.matches}</p>
+                  </div>
                 </div>
               </div>
-              <hr />
-              <div>
-                <div className="">
-                  <h3>Matches</h3>
-                  <p>{this.props.matches}</p>
-                </div>
-              </div>
-              <hr />
-            </div>
             </section>
             <section>
-            <div className="">
               <div>
-                <div className="">
-                  <h3>{this.props.topName}</h3>
-                  <p>{this.props.top}</p>
+                <div>
+                  <div className="pad">
+                    <h3>{this.props.topName}</h3>
+                    <p>{this.props.top}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="pad">
+                    <h3>K/D Ratio</h3>
+                    <p>{this.props.killDeathRatio}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="pad">
+                    <h3>Kills</h3>
+                    <p>{this.props.kills}</p>
+                  </div>
                 </div>
               </div>
-              <hr />
-              <div>
-                <div className="">
-                  <h3>K/D Ratio</h3>
-                  <p className="">{this.props.killDeathRatio}</p>
-                </div>
-              </div>
-              <hr />
-              <div>
-                <div className="">
-                  <h3>Kills</h3>
-                  <p className="">{this.props.kills}</p>
-                </div>
-              </div>
-              <hr />
-            </div>
+            </section>
           </section>
         </div>
       </div>

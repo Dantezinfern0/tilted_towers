@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom'
 class NavBar extends Component {
   render() {
     return (
-      <div>
+      <div className="padding-bottom">
         <div className="nav-bar">
           <Link to="/">
-            <h2 className="pad-it">Fortnite</h2>
+            <h2 className="">Fortnite</h2>
           </Link>
           <Link to="/solo">
-            <button className="pad-it">Solo</button>
+            <button className="">Solo</button>
           </Link>
           <Link to="/duo">
-            <button className="pad-it">Duo</button>
+            <button className="">Duo</button>
           </Link>
           <Link to="/squads">
-            <button className="pad-it">Squads</button>
+            <button className="">Squads</button>
           </Link>
           <Link to="/search">
-            <button className="pad-it">Search</button>
+            <button className="">Search</button>
           </Link>
         </div>
       </div>
